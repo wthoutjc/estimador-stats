@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "[name].[contenthash].js",
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -17,10 +18,6 @@ module.exports = {
         use: "babel-loader",
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-      },
-      {
-        use: ["style-loader", "css-loader", "sass-loader"],
-        test: /\.(css|scss|sass)$/,
       },
     ],
   },
